@@ -1,0 +1,105 @@
+{
+  "configVersion": 1,
+  "timestamp": 1783912420995,
+  "index": "/orbitra/dev/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/orbitra/dev/chunk-BXBKSMFQ.js",
+        "/orbitra/dev/chunk-CW4TVNSC.js",
+        "/orbitra/dev/chunk-E4CBAWSW.js",
+        "/orbitra/dev/chunk-EHLFGAXV.js",
+        "/orbitra/dev/chunk-ERX2E2O6.js",
+        "/orbitra/dev/chunk-KJM6IEQ7.js",
+        "/orbitra/dev/chunk-M4GPW66P.js",
+        "/orbitra/dev/chunk-P74Q57PG.js",
+        "/orbitra/dev/chunk-U4ABBMMK.js",
+        "/orbitra/dev/chunk-V4ED77VZ.js",
+        "/orbitra/dev/chunk-VE553X4S.js",
+        "/orbitra/dev/chunk-WJ37WYYQ.js",
+        "/orbitra/dev/chunk-XIF7LTSF.js",
+        "/orbitra/dev/chunk-ZPQ7UFGW.js",
+        "/orbitra/dev/favicon.ico",
+        "/orbitra/dev/index.html",
+        "/orbitra/dev/main-BPY3E7LZ.js",
+        "/orbitra/dev/manifest.webmanifest",
+        "/orbitra/dev/styles-CDA62OU4.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/orbitra/dev/icons/icon-128x128.png",
+        "/orbitra/dev/icons/icon-144x144.png",
+        "/orbitra/dev/icons/icon-152x152.png",
+        "/orbitra/dev/icons/icon-192x192.png",
+        "/orbitra/dev/icons/icon-384x384.png",
+        "/orbitra/dev/icons/icon-512x512.png",
+        "/orbitra/dev/icons/icon-72x72.png",
+        "/orbitra/dev/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/orbitra/dev/chunk-BXBKSMFQ.js": "497069a963887f4afb8805df88d2bb8f06c6aacd",
+    "/orbitra/dev/chunk-CW4TVNSC.js": "37aab528efdad270761ef5844f8175ffb883a589",
+    "/orbitra/dev/chunk-E4CBAWSW.js": "72c87657caf5ff98c86bbb99299f27a984912055",
+    "/orbitra/dev/chunk-EHLFGAXV.js": "aebdc9cc9f21f77004ed4f5a4898cceba0ddbcf3",
+    "/orbitra/dev/chunk-ERX2E2O6.js": "1a2715e76145e19398424bf7d33a1eed9edb05eb",
+    "/orbitra/dev/chunk-KJM6IEQ7.js": "7d76f592d0c94ea4ce5df64a8783c3a5974d554f",
+    "/orbitra/dev/chunk-M4GPW66P.js": "c6afee9f29ac8fd32f5bb59a9c2dd9f22d1b919c",
+    "/orbitra/dev/chunk-P74Q57PG.js": "9eb230fa314732fbc3b0d287bbda793fcc13db56",
+    "/orbitra/dev/chunk-U4ABBMMK.js": "52ca7d7362a1c300199db04cbe94d71ec85a64eb",
+    "/orbitra/dev/chunk-V4ED77VZ.js": "885153f95164cd72da6a38849455d747bc9bbac3",
+    "/orbitra/dev/chunk-VE553X4S.js": "3412d0c5abb44cac419bedc0b1b33d4bbcb9b910",
+    "/orbitra/dev/chunk-WJ37WYYQ.js": "25af0d415409722b900731641583c78aebcf7c77",
+    "/orbitra/dev/chunk-XIF7LTSF.js": "9309731be6ca91d29d4b1f37b3370b3da012cbf5",
+    "/orbitra/dev/chunk-ZPQ7UFGW.js": "6f8f871decd49c69127fd7c69a449c2d1c9ae895",
+    "/orbitra/dev/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/orbitra/dev/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/orbitra/dev/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/orbitra/dev/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/orbitra/dev/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/orbitra/dev/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/orbitra/dev/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/orbitra/dev/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/orbitra/dev/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/orbitra/dev/index.html": "efd0b0e1d8f0274a125271a309e44639ff6cd771",
+    "/orbitra/dev/main-BPY3E7LZ.js": "f4dfdb19adeabdc421e8e6bb44f8cad76c098bde",
+    "/orbitra/dev/manifest.webmanifest": "ea769706c4a59e364d0877b9ef23326f040ace36",
+    "/orbitra/dev/styles-CDA62OU4.css": "7485dcaa0a321b6102768f1a04408bf07c3b5239"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
