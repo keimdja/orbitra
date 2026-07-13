@@ -1,0 +1,9 @@
+<button
+  type="button"
+  [class]="classes()"
+  [disabled]="disabled()"
+  [attr.aria-label]="ariaLabel()"
+  (click)="onClick()"
+>
+  <app-icon [name]="icon()" size="lg" />
+</button>
