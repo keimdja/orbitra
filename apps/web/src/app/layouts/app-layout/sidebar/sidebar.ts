@@ -5,11 +5,12 @@ import type { Dashboard } from '../../../models/dashboard/dashboard.model';
 import { Icon } from '../../../shared/components/icon/icon';
 import { IconTile } from '../../../shared/components/icon-tile/icon-tile';
 import { Avatar } from '../../../shared/components/avatar/avatar';
+import { Logo } from '../../../shared/components/logo/logo';
 import { NAV_ITEMS } from '../nav-items';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink, RouterLinkActive, Icon, IconTile, Avatar],
+  imports: [RouterLink, RouterLinkActive, Icon, IconTile, Avatar, Logo],
   templateUrl: './sidebar.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

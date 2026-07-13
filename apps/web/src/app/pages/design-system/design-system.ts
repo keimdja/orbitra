@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { ThemeService } from '../../services/theme/theme.service';
+import { Logo } from '../../shared/components/logo/logo';
 import { Icon } from '../../shared/components/icon/icon';
 import { Button } from '../../shared/components/button/button';
 import { IconButton } from '../../shared/components/icon-button/icon-button';
@@ -47,6 +48,7 @@ const ACCENT_SAMPLES = [
 @Component({
   selector: 'app-design-system',
   imports: [
+    Logo,
     Icon,
     Button,
     IconButton,
