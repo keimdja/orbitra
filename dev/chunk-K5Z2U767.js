@@ -1,0 +1,1 @@
+import{Ba as o,Ta as n,Ua as m,ib as a}from"./chunk-KTBW56G5.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-home"]],decls:2,vars:0,consts:[[1,"p-10","text-sm","text-text-3"]],template:function(e,c){e&1&&(n(0,"div",0),a(1,"Home \u2014 coming soon."),m())},encapsulation:2,changeDetection:0})};export{i as Home};

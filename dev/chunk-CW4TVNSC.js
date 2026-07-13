@@ -1,1 +1,0 @@
-import{Aa as n,Sa as a,Ta as c,hb as o}from"./chunk-ERX2E2O6.js";var s=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-search"]],decls:2,vars:0,consts:[[1,"p-10","text-sm","text-text-3"]],template:function(e,r){e&1&&(a(0,"div",0),o(1,"Search \u2014 coming soon."),c())},encapsulation:2,changeDetection:0})};export{s as Search};
