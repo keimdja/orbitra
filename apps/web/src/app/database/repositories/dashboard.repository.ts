@@ -25,6 +25,11 @@ export class DashboardRepository {
     return this.db.dashboards.where('userId').equals(userId).sortBy('sortOrder');
   }
 
+  /** No auth/multi-user support yet, so shell-level navigation reads every dashboard directly instead of scoping through a user record that doesn't exist yet. */
+  getAll(): Promise<Dashboard[]> {
+    return this.db.dashboards.orderBy('sortOrder').toArray();
+  }
+
   async update(id: string, changes: Partial<Omit<Dashboard, 'id'>>): Promise<void> {
     await this.db.dashboards.update(id, DashboardUpdateSchema.parse(changes));
   }

@@ -1,3 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-symbols: 'Material Symbols Rounded';
+
+  --color-stage: var(--stage);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-border: var(--border);
+  --color-border-2: var(--border-2);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-accent: var(--accent);
+  --color-accent-weak: var(--accent-weak);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-danger-weak: var(--danger-weak);
+  --color-info: var(--info);
+
+  --shadow-card: var(--shadow);
+  --shadow-card-lg: var(--shadow-lg);
+}
+
+/* Orbitra "Ion" palette. Applied by ThemeService via data-theme on <html>. */
+:root[data-theme='light'] {
+  --stage: #e3efec;
+  --bg: #f1f8f6;
+  --surface: #ffffff;
+  --surface-2: #e7f5f1;
+  --surface-3: #d9eee7;
+  --border: rgba(10, 40, 35, 0.09);
+  --border-2: rgba(10, 40, 35, 0.16);
+  --text: #0b211d;
+  --text-2: #3e6a62;
+  --text-3: #6e9187;
+  --accent: #0fa6ae;
+  --accent-weak: rgba(15, 166, 174, 0.1);
+  --success: #5fa02a;
+  --warning: #c98a1e;
+  --danger: #d1483c;
+  --danger-weak: rgba(209, 72, 60, 0.1);
+  --info: #5fa02a;
+  --shadow: 0 1px 3px rgba(10, 40, 35, 0.06), 0 8px 22px -12px rgba(10, 40, 35, 0.14);
+  --shadow-lg: 0 18px 46px -14px rgba(10, 40, 35, 0.26);
+}
+
+:root[data-theme='dark'] {
+  --stage: #04100f;
+  --bg: #081717;
+  --surface: #0f2a29;
+  --surface-2: #153634;
+  --surface-3: #1d443f;
+  --border: rgba(180, 255, 240, 0.09);
+  --border-2: rgba(180, 255, 240, 0.17);
+  --text: #dffaf6;
+  --text-2: #7fada8;
+  --text-3: #4b8783;
+  --accent: #2fd8e0;
+  --accent-weak: rgba(47, 216, 224, 0.16);
+  --success: #8ddb4c;
+  --warning: #d6a441;
+  --danger: #e05b4e;
+  --danger-weak: rgba(224, 91, 78, 0.16);
+  --info: #8ddb4c;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.45), 0 12px 30px -14px rgba(0, 0, 0, 0.65);
+  --shadow-lg: 0 20px 50px -14px rgba(0, 0, 0, 0.75);
+}

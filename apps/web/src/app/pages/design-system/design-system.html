@@ -1,0 +1,325 @@
+<div class="max-w-4xl mx-auto p-10 pb-24 bg-surface-2 rounded-3xl">
+  <div class="flex items-start justify-between gap-4 mb-8">
+    <div>
+      <h1 class="m-0 text-2xl font-extrabold tracking-tight text-text">Design System</h1>
+      <p class="mt-1.5 text-sm text-text-2">
+        Every shared component in shared/components, in every variant. Dev-only — never linked from
+        production navigation.
+      </p>
+    </div>
+    <app-button variant="secondary" size="sm" icon="dark_mode" (clicked)="themeService.toggle()">
+      Toggle theme
+    </app-button>
+  </div>
+
+  <!-- COLOR TOKENS -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Surfaces</h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] gap-2.5 mb-6">
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-stage"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--stage</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-bg"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--bg</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-surface"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--surface</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-surface-2"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--surface-2</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-surface-3"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--surface-3</div>
+      </div>
+    </div>
+
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">
+      Text &amp; borders
+    </h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] gap-2.5 mb-6">
+      <div class="border border-border rounded-xl px-2.5 py-3.5 bg-surface">
+        <div class="text-text font-bold text-sm mb-1.5">Aa</div>
+        <div class="text-[11px] font-semibold text-text-3 font-mono">--text</div>
+      </div>
+      <div class="border border-border rounded-xl px-2.5 py-3.5 bg-surface">
+        <div class="text-text-2 font-bold text-sm mb-1.5">Aa</div>
+        <div class="text-[11px] font-semibold text-text-3 font-mono">--text-2</div>
+      </div>
+      <div class="border border-border rounded-xl px-2.5 py-3.5 bg-surface">
+        <div class="text-text-3 font-bold text-sm mb-1.5">Aa</div>
+        <div class="text-[11px] font-semibold text-text-3 font-mono">--text-3</div>
+      </div>
+      <div class="border-2 border-border rounded-xl px-2.5 py-3.5 bg-surface">
+        <div class="h-3.5 mb-1.5"></div>
+        <div class="text-[11px] font-semibold text-text-3 font-mono">--border</div>
+      </div>
+      <div class="border-2 border-border-2 rounded-xl px-2.5 py-3.5 bg-surface">
+        <div class="h-3.5 mb-1.5"></div>
+        <div class="text-[11px] font-semibold text-text-3 font-mono">--border-2</div>
+      </div>
+    </div>
+
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">
+      Accent &amp; semantic
+    </h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] gap-2.5">
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-accent"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--accent</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-success"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--success</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-warning"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--warning</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-danger"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--danger</div>
+      </div>
+      <div class="border border-border rounded-xl overflow-hidden">
+        <div class="h-13 bg-info"></div>
+        <div class="px-2.5 py-2 text-[11px] font-semibold font-mono">--info</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">
+      Typography — Hanken Grotesk
+    </h2>
+    <div class="px-5 py-4.5 bg-surface border border-border rounded-2xl flex flex-col gap-2.5">
+      <div class="flex items-baseline gap-3.5">
+        <span class="text-[34px] font-extrabold tracking-tight text-text">Aa</span>
+        <span class="text-[11px] text-text-3 font-mono">34px / 800</span>
+      </div>
+      <div class="flex items-baseline gap-3.5">
+        <span class="text-2xl font-extrabold tracking-tight text-text">Aa</span>
+        <span class="text-[11px] text-text-3 font-mono">24px / 800</span>
+      </div>
+      <div class="flex items-baseline gap-3.5">
+        <span class="text-base font-bold text-text">Aa</span>
+        <span class="text-[11px] text-text-3 font-mono">16px / 700</span>
+      </div>
+      <div class="flex items-baseline gap-3.5">
+        <span class="text-sm font-medium text-text">Aa</span>
+        <span class="text-[11px] text-text-3 font-mono">14px / 500</span>
+      </div>
+      <div class="flex items-baseline gap-3.5">
+        <span class="text-xs font-semibold uppercase tracking-wide text-text-3">Aa Label</span>
+        <span class="text-[11px] text-text-3 font-mono">12px / 600 / uppercase</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ICON -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Icon</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-6">
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="stack" size="sm" />
+        <span class="text-[11px] text-text-3 font-mono">sm</span>
+      </div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="stack" size="md" />
+        <span class="text-[11px] text-text-3 font-mono">md</span>
+      </div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="stack" size="lg" />
+        <span class="text-[11px] text-text-3 font-mono">lg</span>
+      </div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="stack" size="xl" />
+        <span class="text-[11px] text-text-3 font-mono">xl</span>
+      </div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="stack" size="2xl" />
+        <span class="text-[11px] text-text-3 font-mono">2xl</span>
+      </div>
+      <div class="w-px self-stretch bg-border"></div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="star" size="lg" [filled]="false" />
+        <span class="text-[11px] text-text-3 font-mono">unfilled</span>
+      </div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="star" size="lg" [filled]="true" />
+        <span class="text-[11px] text-text-3 font-mono">filled</span>
+      </div>
+      <div class="flex flex-col items-center gap-1.5">
+        <app-icon name="pool" size="lg" [filled]="true" [weight]="500" class="text-accent" />
+        <span class="text-[11px] text-text-3 font-mono">weight 500</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUTTON -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Button</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-3">
+      <app-button variant="primary">Primary</app-button>
+      <app-button variant="secondary">Secondary</app-button>
+      <app-button variant="primary" icon="add">With icon</app-button>
+      <app-button variant="primary" size="sm">Small</app-button>
+      <app-button variant="primary" [disabled]="true">Disabled</app-button>
+    </div>
+  </section>
+
+  <!-- ICON BUTTON -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Icon button</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-3">
+      <app-icon-button icon="arrow_back" ariaLabel="Back" variant="default" size="md" />
+      <app-icon-button icon="close" ariaLabel="Close" variant="default" size="sm" />
+      <app-icon-button icon="delete" ariaLabel="Delete entry" variant="danger" />
+      <app-icon-button icon="delete" ariaLabel="Remove field" variant="ghost" />
+      <app-icon-button icon="tune" ariaLabel="Disabled" [disabled]="true" />
+    </div>
+  </section>
+
+  <!-- FORM CONTROLS -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">
+      Form controls
+    </h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl grid gap-5 sm:grid-cols-2">
+      <app-text-input label="Name" placeholder="e.g. Pool Maintenance" [(value)]="sampleText" />
+      <app-text-input label="Email" type="email" placeholder="you@example.com" />
+      <app-text-input label="Disabled" [disabled]="true" value="Can't edit this" />
+      <app-select label="Field type" [options]="fieldTypeOptions" [(value)]="sampleSelect" />
+      <div class="sm:col-span-2">
+        <app-textarea
+          label="Description"
+          placeholder="What is this dashboard for?"
+          [(value)]="sampleTextarea"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- TOGGLE -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Toggle</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-6">
+      <div class="flex items-center gap-2.5">
+        <app-toggle ariaLabel="Sample on" [(checked)]="sampleToggleOn" />
+        <span class="text-sm font-semibold text-text">{{ sampleToggleOn() ? 'Yes' : 'No' }}</span>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <app-toggle ariaLabel="Sample off" [(checked)]="sampleToggleOff" />
+        <span class="text-sm font-semibold text-text">{{ sampleToggleOff() ? 'Yes' : 'No' }}</span>
+      </div>
+      <div class="flex items-center gap-2.5">
+        <app-toggle ariaLabel="Disabled" [checked]="true" [disabled]="true" />
+        <span class="text-sm font-semibold text-text-3">Disabled</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTED CONTROL -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">
+      Segmented control
+    </h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-6">
+      <app-segmented-control [options]="viewModeOptions" [(value)]="sampleViewMode" />
+      <span class="text-[13px] text-text-3">Selected: {{ sampleViewMode() }}</span>
+    </div>
+  </section>
+
+  <!-- BADGE / CHIP -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">
+      Badge &amp; chip
+    </h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-3">
+      <app-badge variant="accent">Badge</app-badge>
+      <app-badge variant="danger">Danger</app-badge>
+      <app-chip label="pH" value="7.4" />
+      <app-chip label="Chlorine" value="2.1 ppm" />
+    </div>
+  </section>
+
+  <!-- AVATAR -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Avatar</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-4">
+      <app-avatar initials="AK" size="sm" />
+      <app-avatar initials="AK" size="md" />
+    </div>
+  </section>
+
+  <!-- ICON TILE -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Icon tile</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl flex flex-wrap items-center gap-3">
+      <app-icon-tile icon="pool" accentColor="#0FA6AE" size="sm" />
+      <app-icon-tile icon="fitness_center" accentColor="#5FA02A" size="md" />
+      <app-icon-tile icon="savings" accentColor="#2FD8E0" size="lg" />
+      @for (accent of accentSamples; track accent) {
+        <app-icon-tile icon="stacks" [accentColor]="accent" size="sm" />
+      }
+    </div>
+  </section>
+
+  <!-- CARD -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Card</h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3">
+      <app-card>
+        <div class="text-sm font-bold text-text mb-1">Static card</div>
+        <div class="text-[13px] text-text-3">No hover interaction.</div>
+      </app-card>
+      <app-card [clickable]="true">
+        <div class="text-sm font-bold text-text mb-1">Clickable card</div>
+        <div class="text-[13px] text-text-3">Hover to see the lift effect.</div>
+      </app-card>
+    </div>
+  </section>
+
+  <!-- EMPTY STATE -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Empty state</h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-4">
+      <app-empty-state
+        icon="search"
+        title="Search everything"
+        description="Find dashboards by name, or entries by any logged value or note."
+      />
+      <app-empty-state
+        icon="note_stack_add"
+        title="No entries yet"
+        description="Log your first entry to start tracking."
+        actionLabel="Add entry"
+      />
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <section class="mb-10">
+    <h2 class="text-[11.5px] font-bold uppercase tracking-wide text-text-3 mb-2.5">Modal</h2>
+    <div class="p-5 bg-surface border border-border rounded-2xl">
+      <app-button variant="secondary" size="sm" (clicked)="openModal()">Open modal</app-button>
+    </div>
+  </section>
+</div>
+
+<app-modal
+  [open]="modalOpen()"
+  title="Create dashboard"
+  subtitle="Track anything in your life."
+  (closed)="closeModal()"
+>
+  <app-text-input label="Name" placeholder="e.g. Pool Maintenance" />
+  <div modal-footer class="flex gap-2.5 w-full">
+    <app-button variant="secondary" (clicked)="closeModal()">Cancel</app-button>
+    <app-button variant="primary" icon="arrow_forward" (clicked)="closeModal()">Create</app-button>
+  </div>
+</app-modal>

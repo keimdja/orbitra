@@ -1,0 +1,11 @@
+<button
+  type="button"
+  role="switch"
+  [attr.aria-checked]="checked()"
+  [attr.aria-label]="ariaLabel()"
+  [disabled]="disabled()"
+  [class]="trackClasses()"
+  (click)="onClick()"
+>
+  <span class="w-[21px] h-[21px] rounded-full bg-white shadow-[0_1px_3px_rgba(0,0,0,0.3)]"></span>
+</button>

@@ -1,0 +1,42 @@
+@if (open()) {
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/50 backdrop-blur-sm"
+    role="presentation"
+    (click)="close()"
+  >
+    <div
+      class="w-full max-w-[460px] max-h-[90vh] overflow-auto bg-surface border border-border rounded-[22px] shadow-card-lg"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="title()"
+      (click)="stopPropagation($event)"
+    >
+      <div
+        class="px-6 pt-[22px] pb-[18px] border-b border-border flex items-center justify-between gap-4"
+      >
+        <div>
+          <h2 class="m-0 text-[19px] font-extrabold tracking-tight text-text">{{ title() }}</h2>
+          @if (subtitle()) {
+            <p class="mt-0.5 text-[13px] text-text-3">{{ subtitle() }}</p>
+          }
+        </div>
+        <button
+          type="button"
+          class="w-[34px] h-[34px] rounded-[9px] flex-none flex items-center justify-center bg-surface-2 text-text-2 cursor-pointer"
+          aria-label="Close"
+          (click)="close()"
+        >
+          <app-icon name="close" size="md" />
+        </button>
+      </div>
+
+      <div class="px-6 py-[22px]">
+        <ng-content />
+      </div>
+
+      <div class="px-6 pt-4 pb-[22px] border-t border-border flex gap-2.5">
+        <ng-content select="[modal-footer]" />
+      </div>
+    </div>
+  </div>
+}

@@ -1,0 +1,6 @@
+<button [type]="type()" [class]="classes()" [disabled]="disabled()" (click)="onClick()">
+  @if (icon()) {
+    <app-icon [name]="icon()" [size]="iconSize()" />
+  }
+  <ng-content />
+</button>

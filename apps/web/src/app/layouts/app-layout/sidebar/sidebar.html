@@ -1,0 +1,57 @@
+<div class="flex items-center gap-2.5 pb-[18px] justify-center lg:justify-start">
+  <div
+    class="w-[30px] h-[30px] rounded-[9px] bg-accent flex-none flex items-center justify-center shadow-[0_3px_10px_-3px_var(--accent)]"
+  >
+    <app-icon name="stack" size="md" [filled]="true" [weight]="500" class="text-white" />
+  </div>
+  <span class="hidden lg:inline text-base font-bold tracking-tight text-text whitespace-nowrap"
+    >Orbitra</span
+  >
+</div>
+
+<button
+  type="button"
+  class="flex items-center gap-2.5 h-[42px] px-0 lg:px-3.5 rounded-xl bg-accent text-white font-semibold text-sm justify-center lg:justify-start shadow-[0_4px_14px_-5px_var(--accent)] cursor-pointer flex-none"
+>
+  <app-icon name="add" size="lg" />
+  <span class="hidden lg:inline whitespace-nowrap">New dashboard</span>
+</button>
+
+<nav class="flex flex-col gap-0.5 mt-4 flex-none">
+  @for (item of navItems; track item.path) {
+    <a
+      [routerLink]="item.path"
+      routerLinkActive="bg-accent-weak text-accent"
+      #linkActive="routerLinkActive"
+      [routerLinkActiveOptions]="{ exact: item.exactMatch }"
+      class="flex items-center gap-3 h-[42px] px-0 lg:px-3 rounded-[11px] justify-center lg:justify-start text-text-2 hover:bg-surface-2 transition-colors"
+    >
+      <app-icon [name]="item.icon" size="lg" [filled]="linkActive.isActive" [weight]="500" />
+      <span class="hidden lg:inline text-sm font-medium whitespace-nowrap">{{ item.label }}</span>
+    </a>
+  }
+</nav>
+
+<div class="hidden lg:flex flex-col mt-5 flex-1 min-h-0">
+  <div class="text-[11px] font-bold uppercase tracking-wide text-text-3 px-2.5 pb-2 flex-none">
+    Dashboards
+  </div>
+  <div class="flex flex-col gap-0.5 overflow-y-auto">
+    @for (dashboard of dashboards(); track dashboard.id) {
+      <a
+        [routerLink]="['/dashboards', dashboard.id]"
+        routerLinkActive="bg-surface-2"
+        class="flex items-center gap-2.5 h-[38px] px-2.5 rounded-[10px] text-text hover:bg-surface-2 transition-colors"
+      >
+        <app-icon-tile [icon]="dashboard.icon" [accentColor]="dashboard.accent" size="sm" />
+        <span class="text-[13.5px] font-medium truncate">{{ dashboard.name }}</span>
+      </a>
+    }
+  </div>
+</div>
+
+<div
+  class="mt-auto pt-3.5 border-t border-border flex items-center justify-center lg:justify-start flex-none"
+>
+  <app-avatar initials="?" size="sm" />
+</div>

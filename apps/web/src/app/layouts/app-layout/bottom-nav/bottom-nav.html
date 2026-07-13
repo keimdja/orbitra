@@ -1,0 +1,28 @@
+<ng-template #navButton let-item>
+  <a
+    [routerLink]="item.path"
+    routerLinkActive="text-accent"
+    #linkActive="routerLinkActive"
+    [routerLinkActiveOptions]="{ exact: item.exactMatch }"
+    class="flex-1 flex flex-col items-center gap-1 py-1.5 text-text-3 transition-colors"
+  >
+    <app-icon [name]="item.icon" size="lg" [filled]="linkActive.isActive" [weight]="500" />
+    <span class="text-[10.5px] font-semibold">{{ item.label }}</span>
+  </a>
+</ng-template>
+
+@for (item of leftItems; track item.path) {
+  <ng-container [ngTemplateOutlet]="navButton" [ngTemplateOutletContext]="{ $implicit: item }" />
+}
+
+<button
+  type="button"
+  aria-label="New dashboard"
+  class="flex-none w-[54px] h-[54px] -mt-5 rounded-2xl border-[3px] border-surface bg-accent text-white flex items-center justify-center shadow-[0_8px_20px_-6px_var(--accent)] cursor-pointer"
+>
+  <app-icon name="add" size="xl" [weight]="500" />
+</button>
+
+@for (item of rightItems; track item.path) {
+  <ng-container [ngTemplateOutlet]="navButton" [ngTemplateOutletContext]="{ $implicit: item }" />
+}
