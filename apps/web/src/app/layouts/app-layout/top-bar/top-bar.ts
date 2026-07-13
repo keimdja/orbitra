@@ -2,10 +2,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Icon } from '../../../shared/components/icon/icon';
 import { IconButton } from '../../../shared/components/icon-button/icon-button';
+import { Logo } from '../../../shared/components/logo/logo';
 
 @Component({
   selector: 'app-top-bar',
-  imports: [RouterLink, Icon, IconButton],
+  imports: [RouterLink, Icon, IconButton, Logo],
   templateUrl: './top-bar.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
