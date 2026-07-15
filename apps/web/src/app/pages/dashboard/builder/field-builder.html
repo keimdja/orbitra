@@ -1,0 +1,104 @@
+<div class="p-5.5 md:p-7.5 lg:p-8.5">
+  <div class="max-w-[680px] mx-auto">
+    <div class="flex items-center gap-3 mb-1.5">
+      <app-icon-button icon="arrow_back" ariaLabel="Back" (clicked)="done()" />
+      <div>
+        <h1 class="m-0 text-[22px] font-extrabold tracking-tight text-text">Dashboard fields</h1>
+        <p class="mt-0.5 text-[13.5px] text-text-3">
+          Define what you track in {{ dashboardName() }}. Drag to reorder.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2.5 mt-5.5">
+      @for (field of fields(); track field.id) {
+        <div
+          class="flex items-center gap-3 p-3.5 bg-surface border border-border rounded-[14px] shadow-card"
+        >
+          <app-icon name="drag_indicator" size="lg" class="text-text-3" />
+          <span
+            class="w-9.5 h-9.5 rounded-[10px] bg-surface-2 flex items-center justify-center flex-none"
+          >
+            <app-icon [name]="typeIcon(field.type)" size="md" class="text-accent" />
+          </span>
+          <input
+            [value]="field.label"
+            (input)="onLabelInput(field.id, $event)"
+            class="flex-1 min-w-0 border-none bg-transparent outline-none text-[15px] font-semibold text-text"
+          />
+          <app-select
+            [options]="fieldTypeOptions"
+            [value]="field.type"
+            (valueChange)="onTypeChange(field.id, $event)"
+          />
+          @if (field.type === 'number') {
+            <button
+              type="button"
+              [attr.aria-pressed]="field.showAsWidget"
+              aria-label="Show as widget on dashboard"
+              title="Show as widget on dashboard"
+              class="w-8.5 h-8.5 rounded-[9px] flex items-center justify-center cursor-pointer flex-none"
+              [class.bg-accent-weak]="field.showAsWidget"
+              [class.text-accent]="field.showAsWidget"
+              [class.bg-surface-2]="!field.showAsWidget"
+              [class.text-text-3]="!field.showAsWidget"
+              (click)="toggleWidget(field.id)"
+            >
+              <app-icon name="bar_chart" size="md" />
+            </button>
+          }
+          <div class="flex flex-col gap-px">
+            <button
+              type="button"
+              aria-label="Move up"
+              class="w-6.5 h-4.5 flex items-center justify-center text-text-3 cursor-pointer"
+              (click)="moveFieldUp(field.id)"
+            >
+              <app-icon name="keyboard_arrow_up" size="md" />
+            </button>
+            <button
+              type="button"
+              aria-label="Move down"
+              class="w-6.5 h-4.5 flex items-center justify-center text-text-3 cursor-pointer"
+              (click)="moveFieldDown(field.id)"
+            >
+              <app-icon name="keyboard_arrow_down" size="md" />
+            </button>
+          </div>
+          <app-icon-button
+            icon="delete"
+            ariaLabel="Delete field"
+            variant="ghost"
+            size="sm"
+            (clicked)="removeField(field.id)"
+          />
+        </div>
+      }
+    </div>
+
+    <p class="mt-2.5 text-xs text-text-3">
+      The <app-icon name="bar_chart" size="sm" class="align-[-2px]" /> toggle on a number field
+      controls whether it appears as a stat widget on the dashboard (up to 3).
+    </p>
+
+    <div class="mt-4 p-4 bg-surface-2 border border-dashed border-border-2 rounded-[14px]">
+      <div class="text-xs font-bold uppercase tracking-wide text-text-3 mb-2.5">Add a field</div>
+      <div class="flex flex-wrap gap-2">
+        @for (option of addFieldTypes; track option.type) {
+          <button
+            type="button"
+            class="flex items-center gap-1.5 h-9.5 px-3.5 rounded-[10px] border border-border bg-surface text-text text-[13px] font-semibold cursor-pointer transition-colors hover:border-accent hover:text-accent"
+            (click)="addField(option.type)"
+          >
+            <app-icon [name]="option.icon" size="md" />
+            {{ option.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="flex gap-2.5 mt-6">
+      <app-button variant="secondary" [fullWidth]="true" (clicked)="done()">Done</app-button>
+    </div>
+  </div>
+</div>

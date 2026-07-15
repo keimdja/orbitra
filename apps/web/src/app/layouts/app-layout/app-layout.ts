@@ -5,10 +5,11 @@ import { Icon } from '../../shared/components/icon/icon';
 import { Sidebar } from './sidebar/sidebar';
 import { TopBar } from './top-bar/top-bar';
 import { BottomNav } from './bottom-nav/bottom-nav';
+import { CreateDashboardModal } from './create-dashboard-modal/create-dashboard-modal';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet, Icon, Sidebar, TopBar, BottomNav],
+  imports: [RouterOutlet, Icon, Sidebar, TopBar, BottomNav, CreateDashboardModal],
   templateUrl: './app-layout.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'flex-1 min-h-0 flex bg-bg text-text' },

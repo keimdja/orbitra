@@ -7,8 +7,8 @@ import { EntrySchema, EntryUpdateSchema, type Entry } from '../../models/entry/e
 export class EntryRepository {
   private readonly db = inject(OrbitraDatabase);
 
-  async create(entry: Omit<Entry, 'id'>): Promise<Entry> {
-    const record: Entry = EntrySchema.parse({ ...entry, id: uuidv4() });
+  async create(entry: Omit<Entry, 'id' | 'createdAt'>): Promise<Entry> {
+    const record: Entry = EntrySchema.parse({ ...entry, id: uuidv4(), createdAt: new Date() });
     await this.db.entries.add(record);
     return record;
   }

@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CreateDashboardService } from '../../../services/dashboard-create/create-dashboard.service';
 import { Icon } from '../../../shared/components/icon/icon';
 import { NAV_ITEMS } from '../nav-items';
 
@@ -17,6 +18,8 @@ const LEFT_ITEM_COUNT = 2;
   },
 })
 export class BottomNav {
+  protected readonly createDashboardService = inject(CreateDashboardService);
+
   protected readonly leftItems = NAV_ITEMS.slice(0, LEFT_ITEM_COUNT);
   protected readonly rightItems = NAV_ITEMS.slice(LEFT_ITEM_COUNT);
 }
