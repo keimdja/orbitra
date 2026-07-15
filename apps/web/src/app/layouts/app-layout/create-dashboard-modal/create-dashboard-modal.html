@@ -1,0 +1,92 @@
+<app-modal
+  [open]="createDashboardService.isOpen()"
+  title="Create dashboard"
+  subtitle="Track anything in your life."
+  (closed)="close()"
+>
+  <div class="flex items-center gap-3.5 mb-5.5">
+    <span
+      class="w-15 h-15 rounded-2xl flex-none flex items-center justify-center"
+      [style.background]="draftIconBackground()"
+    >
+      <app-icon
+        [name]="draft().icon"
+        size="2xl"
+        [filled]="true"
+        [weight]="500"
+        [style.color]="draft().accent"
+      />
+    </span>
+    <app-text-input
+      class="flex-1"
+      label="Name"
+      placeholder="e.g. Pool Maintenance"
+      [value]="draft().name"
+      (valueChange)="setName($event)"
+    />
+  </div>
+
+  <div class="block text-xs font-bold text-text-2 mb-2 uppercase tracking-wide">Icon</div>
+  <div class="grid grid-cols-7 gap-2 mb-5.5">
+    @for (icon of iconOptions; track icon) {
+      <button
+        type="button"
+        [attr.aria-pressed]="draft().icon === icon"
+        [attr.aria-label]="icon"
+        (click)="selectIcon(icon)"
+        class="h-10.5 rounded-[11px] flex items-center justify-center cursor-pointer transition-colors"
+        [class.border]="draft().icon !== icon"
+        [class.border-border]="draft().icon !== icon"
+        [class.bg-surface-2]="draft().icon !== icon"
+        [class.text-text-2]="draft().icon !== icon"
+        [style.background]="draft().icon === icon ? draftIconBackground() : null"
+        [style.color]="draft().icon === icon ? draft().accent : null"
+        [style.outline]="draft().icon === icon ? '2px solid ' + draft().accent : null"
+      >
+        <app-icon [name]="icon" size="md" />
+      </button>
+    }
+  </div>
+
+  <div class="block text-xs font-bold text-text-2 mb-2 uppercase tracking-wide">Accent color</div>
+  <div class="flex gap-2.5 mb-5.5">
+    @for (accent of accentOptions; track accent) {
+      <button
+        type="button"
+        [attr.aria-pressed]="draft().accent === accent"
+        [attr.aria-label]="'Accent color ' + accent"
+        (click)="selectAccent(accent)"
+        class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer transition-shadow"
+        [style.background]="accent"
+        [style.box-shadow]="
+          draft().accent === accent ? '0 0 0 3px var(--surface), 0 0 0 5px ' + accent : 'none'
+        "
+      >
+        @if (draft().accent === accent) {
+          <app-icon name="check" size="sm" [weight]="600" class="text-white" />
+        }
+      </button>
+    }
+  </div>
+
+  <app-textarea
+    label="Description · optional"
+    placeholder="What is this dashboard for?"
+    [rows]="2"
+    [value]="draft().description"
+    (valueChange)="setDescription($event)"
+  />
+
+  <div modal-footer class="flex gap-2.5 w-full">
+    <app-button variant="secondary" (clicked)="close()">Cancel</app-button>
+    <app-button
+      class="flex-1"
+      [fullWidth]="true"
+      icon="arrow_forward"
+      [disabled]="submitting()"
+      (clicked)="submit()"
+    >
+      Create &amp; add fields
+    </app-button>
+  </div>
+</app-modal>

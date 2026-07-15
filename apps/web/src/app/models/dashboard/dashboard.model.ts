@@ -8,6 +8,7 @@ export const DashboardSchema = z.object({
   accent: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, 'accent must be a hex color'),
   description: z.string(),
   sortOrder: z.number(),
+  favorite: z.boolean(),
 });
 
 export type Dashboard = z.infer<typeof DashboardSchema>;

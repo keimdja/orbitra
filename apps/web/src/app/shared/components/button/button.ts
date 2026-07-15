@@ -34,11 +34,13 @@ export class Button {
   readonly icon = input<string>('');
   readonly disabled = input<boolean>(false);
   readonly type = input<'button' | 'submit'>('button');
+  readonly fullWidth = input<boolean>(false);
 
   readonly clicked = output<void>();
 
   protected readonly classes = computed(
-    () => `${BASE_CLASSES} ${VARIANT_CLASSES[this.variant()]} ${SIZE_CLASSES[this.size()]}`,
+    () =>
+      `${BASE_CLASSES} ${VARIANT_CLASSES[this.variant()]} ${SIZE_CLASSES[this.size()]} ${this.fullWidth() ? 'w-full' : ''}`,
   );
   protected readonly iconSize = computed(() => ICON_SIZE_BY_BUTTON_SIZE[this.size()]);
 

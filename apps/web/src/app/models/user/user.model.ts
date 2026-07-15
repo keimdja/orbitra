@@ -9,9 +9,11 @@ export type Device = z.infer<typeof DeviceSchema>;
 export const UserSchema = z.object({
   id: z.string(),
   name: z.string(),
-  email: z.email(),
+  // Optional: a User may be auto-bootstrapped (e.g. by Create Dashboard) before
+  // Settings ever collects a real name/email — there's no auth requiring these.
+  email: z.email().optional(),
   theme: ThemeSchema,
-  device: DeviceSchema,
+  device: DeviceSchema.optional(),
   createdAt: z.date(),
 });
 
